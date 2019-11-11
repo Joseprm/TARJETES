@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: 'ZCOOL XiaoWei', serif;
+            font-size: 18px;
+            background: linear-gradient(38deg,#45B5E1,#D9B1FE);
+            color: purple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 20px #45B5E1;
+        }
+        .dissenyador_img{
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 200px;
+            background: purple;
+        }
+        .dissenyador_img img{
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            mix-blend-mode: lighten;
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: center;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: top;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .dissenyador_contingut{
+            flex-grow: 1;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+            text-align: justify;
+            hyphens: auto;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+     <div class="container">
+       <div class="dissenyador">
+           <div class="dissenyador_img">
+               <img src="img/trochut_isa_virtual_2-1-1.jpg" 
+               alt="Alex Trochut">
+           </div>
+           <header>
+               <h3>Alex Trochut</h3>
+               <span>1981</span>
+           </header>
+           <p class="dissenyador_contingut">
+               Después de completar sus estudios en Elisava Escola Superior de Disseny, Alex estableció su propio estudio de diseño en Barcelona antes de trasladarse a la ciudad de Nueva York. A través de su diseño, ilustración y práctica tipográfica, ha desarrollado una forma intuitiva de trabajar que ha resultado en su estilo visual expresivo. Para Alex, la tipografía funciona en dos niveles jerárquicos. Primero, está la imagen de la palabra que vemos; la lectura es secundaria. Como diseñador, Alex se enfoca en el potencial del lenguaje como medio visual, llevando el lenguaje al límite para que ver y leer se conviertan en la misma acción y el texto y la imagen se conviertan en una expresión unificada.
+           </p>
+           <footer class="dissenyador_peu">
+               Diseño publicitario para Estrella Damm
+           </footer>
+       </div>
+       <div class="dissenyador">
+           <div class="dissenyador_img">
+               <img src="img/oscar.jpg"
+               alt="Óscar Mariné">
+           </div>
+           <header>
+               <h3>Óscar Mariné</h3>
+               <span>1951</span>
+           </header>
+           <p class="dissenyador_contingut">
+               Diseñador, ilustrador, experto tipógrafo y artista, Oscar Mariné es un comunicador sin límites. Frente a cualquier reto de la difusión, Mariné aporta soluciones creativas apoyadas en un profundo saber tipográfico, una imagen renovadora y una ilustración genuinamente propia. Ya sea un logotipo, una revista de arte, la comunicación de un museo o el suplemento de un periódico, sus trabajos responden siempre a las necesidades de un proyecto aunando solvencia y creatividad. Recientemente ha sido galardonado con el Premio Nacional de Diseño 2010 organziado por el Ministerio de Ciencia e innovación, como reconocimiento a su amplia trayectoria profesional. 
+           </p>
+           <footer class="disseñador_peu">
+               Campaña publicitaria para Absolut Vodka en Estados Unidos. 
+           </footer>
+       </div>
+   </div>
+    
+</body>
+</html>
